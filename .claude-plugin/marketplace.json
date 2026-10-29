@@ -1,0 +1,15 @@
+{
+  "name": "nfltr",
+  "description": "Agent skills for nfltr.",
+  "owner": {
+    "name": "nfltr",
+    "url": "https://nfltr.xyz"
+  },
+  "plugins": [
+    {
+      "name": "nfltr",
+      "source": "./",
+      "description": "Expose local services, reach private services, receive webhooks, and run Claude Code agents on your own machines with nfltr."
+    }
+  ]
+}

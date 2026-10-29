@@ -1,0 +1,13 @@
+{
+  "name": "nfltr",
+  "description": "Expose local services, reach private services, receive webhooks, and run Claude Code agents on your own machines with nfltr.",
+  "version": "0.1.0",
+  "author": {
+    "name": "nfltr",
+    "url": "https://nfltr.xyz"
+  },
+  "homepage": "https://github.com/nfltr/skills",
+  "repository": "https://github.com/nfltr/skills",
+  "license": "Apache-2.0",
+  "keywords": ["nfltr", "tunnel", "webhooks", "agents"]
+}

@@ -1,0 +1,27 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # claude plugin validate needs no login and makes no model call.
+      - name: Install Claude Code (manifest schema check)
+        run: npm install -g @anthropic-ai/claude-code@2.1.306
+
+      # Downloads the nfltr release the Makefile pins through the public
+      # installer, then checks frontmatter, manifests and every nfltr command.
+      - name: make check
+        run: make check
